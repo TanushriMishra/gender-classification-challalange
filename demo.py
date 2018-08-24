@@ -5,14 +5,12 @@ from sklearn.svm import SVC
 from sklearn.naive_bayes import GaussianNB
 from sklearn.metrics import accuracy_score
 clf = tree.DecisionTreeClassifier()
+#3 classifier and defing objects of these models
 clff = KNeighborsClassifier()
 clfff = SVC()
 clffff = GaussianNB()
 
-# CHALLENGE - create 3 more classifiers...
-# 1
-# 2
-# 3
+
 
 # [height, weight, shoe_size]
 X = [[181, 80, 44], [177, 70, 43], [160, 60, 38], [154, 54, 37], [166, 65, 40],
@@ -37,15 +35,15 @@ predictionnn = clfff.predict([[190, 70, 43]])
 clffff = clffff.fit(X, Y)
 predictionnnn = clffff.predict([[190, 70, 43]])
 # CHALLENGE compare their reusults and print the best one!
-
+#print all of them
 print(prediction)
 print(predictionn)
 print(predictionnn)
 print(predictionnnn)
-
+#Defing test set
 _X=[[184,84,44],[198,92,48],[183,83,44],[166,47,36],[170,60,38],[172,64,39],[182,80,42],[180,80,43]]
 _Y=['male','male','male','female','female','female','male','male']
-
+#Predicting the class to which the particular data belongs
 prediction = clf.predict(_X)
 print(prediction)
 acc1 = accuracy_score(_Y,prediction) * 100
